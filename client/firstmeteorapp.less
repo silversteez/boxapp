@@ -1,0 +1,36 @@
+@myMouseFollowColor: red;
+@otherMouseFollowColor: blue;
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#login-buttons {
+  float: right;
+  margin: 20px;
+}
+
+#mouse-track {
+  background-color: black;
+  width: 400px;
+  height: 300px;
+}
+
+.follower {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.my-follower {
+  .follower;
+  background-color: @myMouseFollowColor;
+}
+
+.other-follower {
+  .follower;
+  top: 200px;
+  left: 200px;
+  background-color: @otherMouseFollowColor;
+}

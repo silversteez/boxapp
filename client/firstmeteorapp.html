@@ -1,0 +1,23 @@
+<head>
+  <title>firstmeteorapp</title>
+</head>
+
+<body>
+  {{> loginButtons align="right"}}
+  <div>
+    {{> mouseTrack}}
+  </div>
+</body>
+
+<template name="mouseTrack">
+  <div id="mouse-track">
+    {{#each boxes}}
+    {{> mouseFollower}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="mouseFollower">
+  <div>{{this.owner}}</div>
+</template>
+

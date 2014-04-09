@@ -44,7 +44,12 @@ Template.mouseTrack.events({
 
 Template.mouseFollower.owner = function() {
   return Meteor.userId();
-}
+};
+
+// Slice helper
+Template.mouseFollower.slice = function(inString) {
+  return inString.slice(0,2);
+};
 
 Template.mouseFollower.rendered = function() {
   console.log('rendered!');
